@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from "react";
+import Personajes from './Personajes';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [personajes, setPersonajes] = useState([]);
+
+  useEffect(() => {
+    const obtenerPersonajes = async () => {
+      try {
+        const response = await fetch('https://rickandmortyapi.com/api/character');
+        const data = await response.json();
+        setPersonajes(data.results);
+        setLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
+    obtenerPersonajes();
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      { loading ? (
+        <p>Cargando...</p>
+      ) : error ? (
+        <p>Error: {error}</p>
+      ) : (
+        <Personajes personajes={ personajes } />
+      )}
     </div>
   );
 }

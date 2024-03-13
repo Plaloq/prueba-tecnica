@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+Test técnico Junior Frontend Dev
+Instrucciones:
+Utiliza la API de SWAPI (Star Wars API) https://swapi.dev/ o Rick and Morty (https://rickandmortyapi.com/)
+Puedes utilizar React.js, Angular o Vanilla JS para el desarrollo.
+El estilo del diseño es libre, tomaremos en cuenta que las formas y colores de los elementos sean los adecuados al estilo. Puedes tomar de inspiración los Web Design Trends 2024 (https://abhi-chatterjee.medium.com/5-trends-in-website-design-for-2024-6fa19d9dc999)
+Puedes utilizar cualquier librería o framework de CSS, nosotros te recomendamos que uses Tailwind CSS.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Scope:
+Crea una SPA mostrando los datos que te proporciona la API realizando las siguientes tareas:
+Listar personajes: En una página lista todos los personajes, crea una paginación si así lo requieres.
+Buscador por nombre: En la página donde se lista los personajes, agregar un input que filtre la lista por nombre. Si la API no permite realizar búsquedas por nombre, puedes realizarlo desde el front.
+Ver detalles del personaje: Al dar clic en un personaje de la lista que muestre un modal con detalles generales del personaje: Name, Gender, Birth Year, y un botón donde lo lleve a una página mostrando su ficha técnica.
+Ficha técnica del personaje: En una página diferente a la lista de personajes, mostrar todos los detalles del personaje que te proporciona la API.
+Entrega:
+El proyecto deberá estar en un repositorio de GitHub público. Una vez terminado el test enviar el enlace del repositorio al correo electrónico d.portilla@grupocatalyst.mx o a la persona que lleva tu proceso de selección.
+Extra:
+Las APIs contienen enlaces que traen más información, tomaremos en cuenta si esta información también es desplegada en la ficha técnica del personaje.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+También tomaremos en cuenta si el proyecto está desplegado en un servicio de hosting, como Netlify, Vercel, AWS Amplify, Render, etc.
