@@ -1,4 +1,5 @@
 Test técnico Junior Frontend Dev
+
 Instrucciones:
 Utiliza la API de SWAPI (Star Wars API) https://swapi.dev/ o Rick and Morty (https://rickandmortyapi.com/)
 Puedes utilizar React.js, Angular o Vanilla JS para el desarrollo.
@@ -12,7 +13,7 @@ Buscador por nombre: En la página donde se lista los personajes, agregar un inp
 Ver detalles del personaje: Al dar clic en un personaje de la lista que muestre un modal con detalles generales del personaje: Name, Gender, Birth Year, y un botón donde lo lleve a una página mostrando su ficha técnica.
 Ficha técnica del personaje: En una página diferente a la lista de personajes, mostrar todos los detalles del personaje que te proporciona la API.
 Entrega:
-El proyecto deberá estar en un repositorio de GitHub público. Una vez terminado el test enviar el enlace del repositorio al correo electrónico d.portilla@grupocatalyst.mx o a la persona que lleva tu proceso de selección.
+El proyecto deberá estar en un repositorio de GitHub público. 
 Extra:
 Las APIs contienen enlaces que traen más información, tomaremos en cuenta si esta información también es desplegada en la ficha técnica del personaje.
 
