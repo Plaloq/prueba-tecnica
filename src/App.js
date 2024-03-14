@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import BarraBusqueda from "./BarraBusqueda";
 import Personajes from './Personajes';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [personajes, setPersonajes] = useState([]);
+  const [busqueda, setBusqueda] = useState('');
 
   useEffect(() => {
     const obtenerPersonajes = async () => {
@@ -21,15 +23,25 @@ function App() {
 
     obtenerPersonajes();
   }, []);
+
+  const filtroPersonajes = busqueda
+    ? personajes.filter((personaje) =>
+      personaje.name.toLowerCase().includes(busqueda.toLowerCase())
+    )
+    : personajes;
+
   return (
     <div className="App">
-      { loading ? (
-        <p>Cargando...</p>
-      ) : error ? (
-        <p>Error: {error}</p>
-      ) : (
-        <Personajes personajes={ personajes } />
-      )}
+      <div className="container">
+        <BarraBusqueda onSearch={setBusqueda} />
+        {loading ? (
+          <p>Cargando...</p>
+        ) : error ? (
+          <p>Error: {error}</p>
+        ) : (
+          <Personajes personajes={filtroPersonajes} />
+        )}
+      </div>
     </div>
   );
 }
