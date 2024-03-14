@@ -27,14 +27,18 @@ function DetallePersonaje({ match }) {
     }
 
     return (
-        <div className="row text-center">
-            <img src={personaje.image} alt={personaje.name} />
-            <h1>{personaje.name}</h1>
-            <p>Género: {personaje.gender}</p>
-            <p>Especie: {personaje.species}</p>
-            <p>Estado: {personaje.status}</p>
-            <p>Origen: {personaje.origin.name}</p>
-            <p>Última ubicación: {personaje.location.name}</p>
+        <div className="row ">
+            <div className="col-sm-5">
+                <img src={personaje.image} alt={personaje.name} className="w-100" />
+            </div>
+            <div className="col-sm-7">
+                <h1>{personaje.name}</h1>
+                <p>Género: {personaje.gender}</p>
+                <p>Especie: {personaje.species}</p>
+                <p>Estado: {personaje.status}</p>
+                <p>Origen: {personaje.origin.name}</p>
+                <p>Última ubicación: {personaje.location.name}</p>
+            </div>
         </div>
     )
 }

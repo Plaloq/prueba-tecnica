@@ -36,9 +36,11 @@ function App() {
     <Router>
       <div className="App">
         <div className="container">
-          <BarraBusqueda onSearch={setBusqueda} />
           <Routes>
-            <Route path="/" element={<Personajes personajes={filtroPersonajes} />} />
+          <Route path="/" element={<>
+              <BarraBusqueda onSearch={setBusqueda} />
+              <Personajes personajes={filtroPersonajes} />
+            </>} />
             <Route path="/personajes/:id" element={<DetallePersonaje />} />
           </Routes>
         </div>
