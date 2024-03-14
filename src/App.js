@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import BarraBusqueda from "./BarraBusqueda";
 import Personajes from './Personajes';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import DetallePersonaje from "./DetallePersonaje";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -31,18 +33,17 @@ function App() {
     : personajes;
 
   return (
-    <div className="App">
-      <div className="container">
-        <BarraBusqueda onSearch={setBusqueda} />
-        {loading ? (
-          <p>Cargando...</p>
-        ) : error ? (
-          <p>Error: {error}</p>
-        ) : (
-          <Personajes personajes={filtroPersonajes} />
-        )}
+    <Router>
+      <div className="App">
+        <div className="container">
+          <BarraBusqueda onSearch={setBusqueda} />
+          <Routes>
+            <Route path="/" element={<Personajes personajes={filtroPersonajes} />} />
+            <Route path="/personajes/:id" element={<DetallePersonaje />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

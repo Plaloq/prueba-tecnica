@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 function Personajes({ personajes }) {
     const [personajeSeleccionado, setPersonajeSeleccionado] = useState(null);
@@ -14,7 +16,7 @@ function Personajes({ personajes }) {
                     <div className="row justify-content-between p-3">
                         <img src={personaje.image} alt={personaje.name} />
                         <div className="text-start py-3">
-                            <h5 onClick={() => handleClickPersonaje(personaje)}>{personaje.name}</h5>
+                            <h5 className="clickable-name" onClick={() => handleClickPersonaje(personaje)}>{personaje.name}</h5>
                         </div>
                     </div>
                 </div>
@@ -27,9 +29,10 @@ function Personajes({ personajes }) {
                         </div>
                         <div className="modal-body text-center">
                             <img src={personajeSeleccionado.image} alt={personajeSeleccionado.name} />
-                            <h2>{personajeSeleccionado.name}</h2>
+                            <h2 className="mt-3">{personajeSeleccionado.name}</h2>
                             <p>Gender: {personajeSeleccionado.gender}</p>
                             <p>Species: {personajeSeleccionado.species}</p>
+                            <Link to={`/personajes/${personajeSeleccionado.id}`} className="btn btn-cartoon-green">Ver Detalles</Link>
                         </div>
                     </div>
                 </div>

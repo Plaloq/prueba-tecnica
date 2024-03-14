@@ -18,6 +18,14 @@
     color: #A01861;
 }
 
+.clickable-name {
+    cursor: pointer;
+}
+
+.clickable-name:hover {
+    color: green;
+}
+
 
 .modal {
     z-index: 2;
