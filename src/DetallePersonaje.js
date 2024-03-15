@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function DetallePersonaje({ match }) {
     const [personaje, setPersonaje] = useState(null);
@@ -45,9 +45,12 @@ function DetallePersonaje({ match }) {
     if (!personaje) {
         return <p>Cargando...</p>;
     }
-    
+
     return (
-        <div>
+        <div className="pt-5">
+            <Link to="/" className="btn btn-secundary">
+                &#8592; Back
+            </Link>
             <div className="row mt-5">
                 <div className="col-sm-5">
                     <img src={personaje.image} alt={personaje.name} className="w-100" />

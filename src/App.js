@@ -40,6 +40,7 @@ function App() {
         <div className="container pt-5">
           <Routes>
             <Route path="/" element={<>
+              <h1 className="pt-5 titulo">Rick and Morty <br></br> Characters Wiki</h1>
               <BarraBusqueda onSearch={setBusqueda} />
               <Personajes personajes={filtroPersonajes} />
             </>} />
