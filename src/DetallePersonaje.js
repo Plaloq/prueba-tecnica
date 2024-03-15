@@ -43,7 +43,7 @@ function DetallePersonaje({ match }) {
     });
 
     if (!personaje) {
-        return <p>Cargando...</p>;
+        return <p className="pt-5 text-center">Cargando...</p>;
     }
 
     return (
