@@ -4,6 +4,7 @@ import Personajes from './Personajes';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DetallePersonaje from "./DetallePersonaje";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,7 @@ function App() {
             <Route path="/personajes/:id" element={<DetallePersonaje />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );
