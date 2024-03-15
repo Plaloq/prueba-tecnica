@@ -3,6 +3,7 @@ import BarraBusqueda from "./BarraBusqueda";
 import Personajes from './Personajes';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DetallePersonaje from "./DetallePersonaje";
+import Navbar from "./Navbar";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,9 +36,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="container">
+        <Navbar />
+        <div className="container pt-5">
           <Routes>
-          <Route path="/" element={<>
+            <Route path="/" element={<>
               <BarraBusqueda onSearch={setBusqueda} />
               <Personajes personajes={filtroPersonajes} />
             </>} />

@@ -23,7 +23,9 @@
 }
 
 .clickable-name:hover {
-    color: green;
+    background-color: #74FF45;
+    box-shadow: 0 0 20px #74FF45;
+    color: black;
 }
 
 
